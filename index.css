@@ -1,20 +1,165 @@
 html,
 body {
-    font-family: 'Roboto', sans-serif;
-    height: 100%
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
 }
 
-h1 {
-    text-align: center;
-
+a {
+    text-decoration: none;
+    font-weight: 200;
 }
 
-p {
-    text-align: center;
-}
-
-div {
-    color: #2e2e2e;
-    height: 100%;
+.container {
+    display: flex;
+    /* flex-wrap: nowrap; */
     width: 100%;
+    /* justify-content: space-between;
+    justify-items: center; */
+
+}
+
+.sidebar {
+    position: fixed;
+    margin: 60px 15px 0 30px;
+    /* height: 100vmin; */
+    overflow-x: hidden;
+    width: 180px;
+}
+
+
+
+#title {
+    margin: 0;
+    margin-bottom: 15px;
+    font-family: 'Sedgwick Ave Display', sans-serif;
+}
+
+.sidebar a {
+    color: black;
+    display: block;
+}
+
+
+.gallery {
+    margin-left: 180px;
+    font-weight: 200;
+}
+
+figure {
+    position: sticky;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* width: 100vw; */
+    height: 100vh;
+    margin-top: 200px;
+}
+
+figure:nth-child(1) {
+    margin-top: 0;
+}
+
+figure:nth-child(even) img {
+    transform: scale(0.8) rotate(3deg);
+}
+
+figure:nth-child(odd) img {
+    transform: scale(0.8) rotate(-3deg);
+}
+
+figure img {
+    width: 100%;
+    height: auto;
+    /* border-radius: 3px; */
+    border-color: white;
+    border-width: 10px;
+    border-style: solid;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.sidebar {
+    font-weight: 200;
+}
+
+
+.sidebar a {
+    border-width: 1px 0 0 0;
+    border-style: solid;
+}
+
+
+.about h1 {
+    font-size: 1rem;
+    font-weight: 200;
+    display: block;
+    margin: 0;
+    border-width: 0 0 1px 0;
+    border-style: solid;
+}
+
+.about p {
+    margin-left: 20px;
+    position: relative;
+    color: #f5f5f5;
+    transition: all 3s;
+    transition-delay: 3s;
+}
+
+.about p a {
+    color: #f5f5f5;
+    display: inline;
+    border-style: none;
+    transition: all 1s;
+    transition-delay: 3s;
+    margin: 0;
+}
+
+
+
+.about:hover p {
+    color: black;
+    transition-delay: 0s;
+
+}
+
+.about:hover p a {
+    /* transition-delay: 10s; */
+    color: darkblue;
+    transition-delay: 0s;
+
+}
+
+@media (max-aspect-ratio: 1) {
+    .container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        text-align: center;
+        margin-top: 15px;
+        margin-bottom: 15px;
+        width: 100%;
+        justify-content: center;
+        margin: 15px auto;
+    }
+
+    .gallery {
+        margin-left: 0;
+    }
+
+    figure {
+        top: 180px;
+        height: calc(100vh - 360px);
+        margin-bottom: 180px;
+    }
+
+    a {
+        display: inline;
+        margin: 0 5px;
+
+    }
 }
