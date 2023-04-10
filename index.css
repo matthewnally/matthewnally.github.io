@@ -102,33 +102,43 @@ figure img {
 }
 
 .about p {
-    margin-left: 20px;
+    margin-top: -5px;
+    visibility: hidden;
     position: relative;
     color: #f5f5f5;
-    transition: all 3s;
-    transition-delay: 3s;
+    transition: all 0.5s;
+    transition-delay: 1s;
+    margin-left: 30px;
 }
 
 .about p a {
     color: #f5f5f5;
     display: inline;
     border-style: none;
-    transition: all 1s;
-    transition-delay: 3s;
+    transition: all 0.5s;
+    transition-delay: 1s;
     margin: 0;
 }
 
 
 
-.about:hover p {
+.about:hover p,
+.about:active p {
+
+    margin-top: 10px;
+    visibility: visible;
     color: black;
+    transition: all 0.5s;
     transition-delay: 0s;
 
 }
 
-.about:hover p a {
+.about:hover p a,
+.about:active p a {
     /* transition-delay: 10s; */
     color: darkblue;
+
+    transition: all 0.5s;
     transition-delay: 0s;
 
 }
@@ -162,4 +172,10 @@ figure img {
         margin: 0 5px;
 
     }
+
+    .about p {
+        margin-left: 0;
+
+    }
+
 }
