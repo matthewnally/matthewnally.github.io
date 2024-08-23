@@ -1,4 +1,3 @@
-
 const slider = document.querySelector('.slider');
 const slides = document.querySelectorAll('.slider img');
 let currentIndex = 0;
@@ -22,4 +21,4 @@ function updateSlidePosition() {
 setInterval(() => {
     currentIndex = (currentIndex + 1) % totalSlides;
     updateSlidePosition();
-}, 3000); // Change image every 3 seconds
+}, 3000);
